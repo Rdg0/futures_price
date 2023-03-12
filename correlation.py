@@ -31,4 +31,5 @@ def get_correlation_coefficient(prices_first, prices_second):
     first_lst_squering = get_squaring_lst(first_lst_delta_avg)
     second_lst_squering = get_squaring_lst(second_lst_delta_avg)
     divisor_pirson = (sum(first_lst_squering) * sum(second_lst_squering)) ** 0.5
+    print(divinded_pirson/divisor_pirson)
     return divinded_pirson/divisor_pirson
