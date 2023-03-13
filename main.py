@@ -7,7 +7,7 @@ from binance.spot import Spot
 from correlation import get_correlation_coefficient
 from dump import create_dump
 from settings import (
-    API_KEY, SECRET_KEY, dump_tickers, dump_file, SAVE_DUMP,
+    API_KEY, SECRET_KEY, dump_tickers, SAVE_DUMP,
     count_base_indicator, count_short_indicator
 )
 
@@ -57,10 +57,6 @@ while True:
         if corr_base > corr_short:
             price_eth_delta = (deque_ethusdt_short[-1] - deque_ethusdt_short[0])/(deque_ethusdt_short[0] / 100)
             if price_eth_delta >= 1:
-                print('Отклонение собственной цены составило 1% или более.')
+                print('Отклонение собственной цены тикета составило 1% или более.')
         
     time.sleep(1)
-
-
-
-

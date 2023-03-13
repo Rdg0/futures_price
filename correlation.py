@@ -22,7 +22,7 @@ def get_squaring_lst(lst):
 
 
 def get_correlation_coefficient(prices_first, prices_second):
-    """Рассчет коэффициента корреляции."""
+    """Расчет коэффициента корреляции."""
     first_lst_delta_avg = get_delta_with_avg(prices_first)
     second_lst_delta_avg = get_delta_with_avg(prices_second)
     multiply_lst_divinded = get_multiplication_lst(first_lst_delta_avg, second_lst_delta_avg)
@@ -31,5 +31,5 @@ def get_correlation_coefficient(prices_first, prices_second):
     first_lst_squering = get_squaring_lst(first_lst_delta_avg)
     second_lst_squering = get_squaring_lst(second_lst_delta_avg)
     divisor_pirson = (sum(first_lst_squering) * sum(second_lst_squering)) ** 0.5
-    print(divinded_pirson/divisor_pirson)
+
     return divinded_pirson/divisor_pirson
